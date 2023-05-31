@@ -5,21 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 2</title>
+    <link rel="stylesheet" href="ej2.css">
 </head>
 <body>
-   <h1>Ejercicio 2 DNI en array javascript</h1>
-   <form id="formulario">
-        <label for="nombre">Nombre:</label>
-        <input type="text" name="nombre" id="nombre">
-        <label for="dni">DNI:</label>
-        <input type="text" name="dni" id="dni">
-        <label for="email">Correo:</label>
-        <input type="text" name="email" id="email">
-        <div>
-            <button type="submit" onclick="form();">Añadir</button>
-            <button type="reset">Borrar array</button>
-        </div>
-   </form>
+   <h1>Formulario:</h1>
+    <form name="formulario" onsubmit="form()">
+    <label for="nombre">Nombre: </label>
+    <input type="text" id="nombre" name="nombre"><br><br>
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni"><br><br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="age"><br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Borrar">
+    <input type="button" value="Listar" onclick="listarArray();">
+    <!--<button onclick="listarArray();">Listar</button>-->
+  </form>
+  <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>DNI</th>
+                <th>Listar Array</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+
+        </tbody>
+  </table>
 </body>
 <script src="ej2.js"></script>
 </html>
